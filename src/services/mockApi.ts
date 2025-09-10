@@ -11,17 +11,7 @@ const NAMASTE_TERMS = [
   { code: "ASU-S-2.1", term: "Peenisam", system: "Siddha" },
   { code: "ASU-U-1.1", term: "Humma-i-Safrawi", system: "Unani" },
   { code: "ASU-U-2.1", term: "Nazla", system: "Unani" },
-  { code: "ASU-U-10.1", term: "Suda", system: "Unani" },
-  // Add some common English terms for easier searching
-  { code: "ASU-D-1.2.1", term: "Fever", system: "Ayurveda" },
-  { code: "ASU-D-2.2.1", term: "Cold", system: "Ayurveda" },
-  { code: "ASU-D-3.1.1", term: "Headache", system: "Ayurveda" },
-  { code: "ASU-D-4.1.1", term: "Cough", system: "Ayurveda" },
-  { code: "ASU-D-5.1.1", term: "Joint Pain", system: "Ayurveda" },
-  { code: "ASU-D-6.1.1", term: "Diabetes", system: "Ayurveda" },
-  { code: "ASU-D-7.1.1", term: "Hypertension", system: "Ayurveda" },
-  { code: "ASU-S-3.1", term: "Stomach Pain", system: "Siddha" },
-  { code: "ASU-U-3.1", term: "Respiratory Issues", system: "Unani" }
+  { code: "ASU-U-10.1", term: "Suda", system: "Unani" }
 ];
 
 const ICD_MAP = {
@@ -36,17 +26,7 @@ const ICD_MAP = {
   "ASU-S-2.1": { code: "PL22.3", display: "Peenisam pattern" },
   "ASU-U-1.1": { code: "PL21.1", display: "Pitta pattern fever" },
   "ASU-U-2.1": { code: "PL22.1", display: "Nazla pattern" },
-  "ASU-U-10.1": { code: "PL2A.3", display: "Suda pattern headache" },
-  // Add mappings for the new common terms
-  "ASU-D-1.2.1": { code: "PL21.Z", display: "Fever, unspecified" },
-  "ASU-D-2.2.1": { code: "PL22.Z", display: "Common cold" },
-  "ASU-D-3.1.1": { code: "PL2A.Z", display: "Headache, unspecified" },
-  "ASU-D-4.1.1": { code: "PL23.0", display: "Cough" },
-  "ASU-D-5.1.1": { code: "PL28.1", display: "Joint pain" },
-  "ASU-D-6.1.1": { code: "5A11", display: "Type 2 diabetes mellitus" },
-  "ASU-D-7.1.1": { code: "BA00", display: "Essential hypertension" },
-  "ASU-S-3.1": { code: "PL25.0", display: "Abdominal pain" },
-  "ASU-U-3.1": { code: "PL24.0", display: "Respiratory symptoms" }
+  "ASU-U-10.1": { code: "PL2A.3", display: "Suda pattern headache" }
 };
 
 // Simulate network delay
