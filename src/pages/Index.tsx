@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import SearchComponent from '../components/SearchComponent';
 import ResultsListComponent from '../components/ResultsListComponent';
 import FhirDisplayComponent from '../components/FhirDisplayComponent';
+import { Navbar } from '../components/Navbar';
 import { debounce } from '../utils/debounce';
 import { searchAPI, translateAPI } from '../services/api';
 
@@ -121,21 +122,23 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="medical-shadow bg-card border-b border-border">
-        <div className="container mx-auto px-6 py-8">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="medical-shadow bg-card border-b border-border">
+        <div className="container mx-auto px-6 py-12">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-foreground mb-3">
+            <h1 className="text-5xl font-bold text-foreground mb-4">
               <span className="medical-gradient bg-clip-text text-transparent">
-                Codex Setu
+                AyuSetu
               </span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Bridge traditional Indian medicine codes (NAMASTE) with global ICD-11 standards
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Bridge traditional Indian medicine codes (NAMASTE) with global ICD-11 standards for seamless healthcare interoperability
             </p>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* Main Content */}
       <main className="container mx-auto px-6 py-12">
