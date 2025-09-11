@@ -1,6 +1,8 @@
 import axios from 'axios';
+import { mockSearchAPI, mockTranslateAPI, mockHealthCheck } from './mockApi';
 
 const API_BASE_URL = 'http://localhost:3000';
+const USE_MOCK_API = true; // Set to false when real API server is available
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -49,6 +51,10 @@ api.interceptors.response.use(
 
 // Search API function
 export const searchAPI = async (query: string) => {
+  if (USE_MOCK_API) {
+    return await mockSearchAPI(query);
+  }
+  
   try {
     const response = await api.get('/search', {
       params: { q: query }
@@ -73,6 +79,10 @@ export const searchAPI = async (query: string) => {
 
 // Translate API function
 export const translateAPI = async (namasteCode: string) => {
+  if (USE_MOCK_API) {
+    return await mockTranslateAPI(namasteCode);
+  }
+  
   try {
     const response = await api.get('/translate', {
       params: { code: namasteCode }
@@ -95,6 +105,10 @@ export const translateAPI = async (namasteCode: string) => {
 
 // Health check function
 export const healthCheck = async () => {
+  if (USE_MOCK_API) {
+    return await mockHealthCheck();
+  }
+  
   try {
     const response = await api.get('/health');
     return response.data;
